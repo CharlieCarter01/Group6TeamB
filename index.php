@@ -129,6 +129,7 @@
     <script src="js/new-age.min.js"></script>
 	<?php
 		if(isset($_SESSION['valid'])){
+			echo "Logged in as: ";
 			echo $_SESSION['username'];
 		}
 	?>
