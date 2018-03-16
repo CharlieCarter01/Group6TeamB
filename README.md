@@ -38,5 +38,34 @@ CREATE TABLE `user` (
 ```
 4. **Done.**
 
+Decleration
+
+I, Josh Dobson, contributed the following to the submission: 31.6%
+Backend System Design
+PHP
+Database Management
+PHP Test Cases
+
+
+
+I, Chetan Mistry, contributed the following to the submission: 5%
+Front End Design
+Manageyourstress.html
+
+I, Charlie Carter, contributed the following to the submission: 31.6%
+Front End Design
+Main.html
+Recordheart.html
+Stressrecording.html
+JavaScript 
+Recordheart.html
+
+
+I, Joseph Adegbile, contributed the following to the submission: 31.6%
+System Test Case
+
+
+
+
 
 
