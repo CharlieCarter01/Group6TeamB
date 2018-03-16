@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Fits the page to every device -->
+    <meta name="description" content="A Website which will allow you to monitor your stress"> <!--Site Description-->
+    <meta name="author" content="INSE Group6TeamB"> <!-- INSE team and group name -->
+    <title>Record Your Heartrate</title> <!-- Title of page -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!--links the main CSS stylesheet-->
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"> 
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+    <!-- Clear JS local storage on page refresh -->
+    <script>
+    localStorage.clear();
+    </script>
+
+    <!-- Script to record how many times button clicked, saves to local storage -->
+    <script>
+        function countClicks(){
+        console.log("Counting Start...");
+        var counts = localStorage.getItem('click-counts');//You can use
+        if (counts!==null){
+            var newClick = parseInt(counts) + 1;
+        localStorage.setItem('click-counts', newClick);
+        }
+        else{
+        localStorage.setItem('click-counts', "1");
+        }
+        document.getElementById("inputBPM").value = counts;
+        }
+    </script>
+
+  </head>
+
+  <body id="page-top"> <!--Id for top of page for quick access, makes page load in to this part of the page-->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" style="color:black;" href="main.html">StressTracker</a> <!--If pressed will navigate user to top of page-->
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center">
+      <div class="container centered h-100">
+        <!--forces the grid down a few lines to look better-->
+        <br>
+        <br>
+        <br>
+        <br>
+        
+   <!--creates the grid system for the navigation of the site, should play nice with mobile.-->    
+<div class="container">
+  <span style="font-size:50px">Record Your Heartrate</span>
+    <div class="row">
+        <!-- Creates Image which uses the script countClicks to record user clicks -->
+        <div class="col-sm-4 offset-4 offset-center" style="height:25vh;background-color:white;border:2px solid grey;"><img style="height:100%" src="ClickButton.png" onclick="countClicks()"></div>
+    </div>
+    <div class="row"></div>
+</div>
+<h1> Tap The Button Every Time Your Heart Beats For 60 Seconds <h1>
+<label> Your Current Heartrate BPM Is </label>
+<form class="form"> <!-- Creates data capture form for recording BPM -->
+        <div class="col-md-12 mx-auto">
+            <!-- inputBPM ID is used to place the counter info into text field to be submitted-->
+        <input type="text" id="inputBPM" id="showCounts" class="form-control" style="text-align:center" required autofocus>
+        <div class="checkbox">
+        </div>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      </form>
+    </header>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
+  </body>
+
+</html>
