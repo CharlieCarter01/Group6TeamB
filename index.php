@@ -50,6 +50,7 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#Signup">Signup</a> <!-- Add signup to Nav and creates link back -->
             </li>
+
           </ul>
         </div>
       </div>
@@ -129,8 +130,12 @@
     <script src="js/new-age.min.js"></script>
 	<?php
 		if(isset($_SESSION['valid'])){
-			echo "Logged in as: ";
+      echo "Logged in as: ";
 			echo $_SESSION['username'];
+      echo '<a class="nav-link" href="logout.php">Logout</a>';
+      echo "<script type='text/javascript'>";
+      echo "window.location.replace('main.html')";
+      echo "</script>";
 		}
 	?>
   </body>
